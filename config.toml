@@ -1,4 +1,4 @@
-baseURL = "https://www.yubing.co"
+baseURL = "https://www.yubing.co/"
 title = "yubing"
 theme = "hugo-coder"
 languageCode = "en"
