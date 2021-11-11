@@ -6,17 +6,21 @@
 <meta name=color-scheme content="light dark">
 <meta http-equiv=content-security-policy content="upgrade-insecure-requests; block-all-mixed-content; default-src 'self'; child-src 'self'; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net/; form-action 'self'; frame-src 'self'; img-src 'self'; object-src 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com/ https://cdn.jsdelivr.net/; script-src 'self' 'unsafe-inline' https://www.google-analytics.com; prefetch-src 'self'; connect-src 'self' https://www.google-analytics.com;">
 <meta name=author content="yubing">
-<meta name=description content="yubing's personal website">
+<meta name=description content="Um guia de utilização de emojis com Hugo">
 <meta name=keywords content="blog,developer,personal">
 <meta name=twitter:card content="summary">
-<meta name=twitter:title content="Tags">
-<meta name=twitter:description content="yubing's personal website">
-<meta property="og:title" content="Tags">
-<meta property="og:description" content="yubing's personal website">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://www.yubing.co/en/tags/">
-<title>Tags · yubing</title>
-<link rel=canonical href=https://www.yubing.co/en/tags/>
+<meta name=twitter:title content="Emoji Support">
+<meta name=twitter:description content="Um guia de utilização de emojis com Hugo">
+<meta property="og:title" content="Emoji Support">
+<meta property="og:description" content="Um guia de utilização de emojis com Hugo">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.yubing.co/en/posts/emoji-support/"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2019-03-05T00:00:00+00:00">
+<meta property="article:modified_time" content="2019-03-05T00:00:00+00:00">
+<title>
+Emoji Support · yubing
+</title>
+<link rel=canonical href=https://www.yubing.co/en/posts/emoji-support/>
 <link rel=preload href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as=font type=font/woff2 crossorigin>
 <link rel=stylesheet href=/css/coder.min.9800fae273b590afec9dc5ff15104d0c8dbee34abc5f4caa8dc9bab00745b78e.css integrity="sha256-mAD64nO1kK/sncX/FRBNDI2+40q8X0yqjcm6sAdFt44=" crossorigin=anonymous media=screen>
 <link rel=stylesheet href=/css/coder-dark.min.876b132a2ef3947e5bdc3c8dbeda49fc71bd5a4abbd4ddfbc92e8112aebfebe3.css integrity="sha256-h2sTKi7zlH5b3DyNvtpJ/HG9Wkq71N37yS6BEq6/6+M=" crossorigin=anonymous media=screen>
@@ -24,7 +28,6 @@
 <link rel=icon type=image/png href=/images/favicon-16x16.png sizes=16x16>
 <link rel=apple-touch-icon href=/images/apple-touch-icon.png>
 <link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png>
-<link rel=alternate type=application/rss+xml href=/en/tags/index.xml title=yubing>
 <meta name=generator content="Hugo 0.89.2">
 </head>
 <body class="preload-transitions colorscheme-dark">
@@ -60,24 +63,56 @@ yubing
 <span>|</span>
 </li>
 <li class=navigation-item>
-<a href=https://www.yubing.co/tags/>zh-cn</a>
+<a href=https://www.yubing.co/posts/emoji-support/>zh-cn</a>
 </li>
 </ul>
 </section>
 </nav>
 <div class=content>
-<section class="container taxonomy">
+<section class="container post">
+<article>
+<header>
+<div class=post-title>
 <h1 class=title>
-<a class=title-link href=https://www.yubing.co/en/tags/>Tags</a>
+<a class=title-link href=https://www.yubing.co/en/posts/emoji-support/>
+Emoji Support
+</a>
 </h1>
-<ul>
-<li>
-<span class=taxonomy-element>
-<a href=https://www.yubing.co/en/tags/emoji/>emoji</a>
-<sup>1</sup>
+</div>
+<div class=post-meta>
+<div class=date>
+<span class=posted-on>
+<i class="fa fa-calendar" aria-hidden=true></i>
+<time datetime=2019-03-05T00:00:00Z>
+March 5, 2019
+</time>
 </span>
-</li>
-</ul>
+<span class=reading-time>
+<i class="fa fa-clock-o" aria-hidden=true></i>
+One-minute read
+</span>
+</div>
+<div class=tags>
+<i class="fa fa-tag" aria-hidden=true></i>
+<span class=tag>
+<a href=/en/tags/emoji/>emoji</a>
+</span></div>
+</div>
+</header>
+<div>
+<p>Emojis podem ser ativados em um projeto Hugo de diversar formas.</p>
+<p>A função <a href=https://gohugo.io/functions/emojify/><code>emojify</code></a> pode ser chamada diretamente nos templates ou com <a href=https://gohugo.io/templates/shortcode-templates/#inline-shortcodes>Inline Shortcodes</a>.</p>
+<p>Para ativar os emojis globalmente, aplique <code>enableEmoji</code> com o valor <code>true</code> na <a href=https://gohugo.io/getting-started/configuration/>configuração</a> do seu site e então você poderá adicionar códigos de emoji diretamente nos arquivos de conteúdo. Por exemplo:</p>
+<p>O <a href=http://www.emoji-cheat-sheet.com/>Emoji cheat sheet</a> é uma referência útil para identificar códigos de emojis.</p>
+<hr>
+<p><strong>Nota:</strong> Os passos anteriores ativam os caractéres e sequências de emoji do Padrão Unicode no Hugo, porém a renderização desses glifos depende do navegador e plataforma utilizada. Para escolher o estilo dos emojis você pode tanto usar um font de emoji de terceiros ou uma lista de fontes. Por exemplo:</p>
+<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>.emoji {
+  font-family: Apple Color Emoji, Segoe UI Emoji, NotoColorEmoji, Segoe UI Symbol, Android Emoji, EmojiSymbols;
+}</code></pre></div>
+</div>
+<footer>
+</footer>
+</article>
 </section>
 </div>
 <footer class=footer>
