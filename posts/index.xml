@@ -1,3 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 语冰</title><link>https://www.yubing.co/posts/</link><description>Recent content in Posts on 语冰</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 05 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://www.yubing.co/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>支持表情</title><link>https://www.yubing.co/posts/emoji-support/</link><pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate><guid>https://www.yubing.co/posts/emoji-support/</guid><description>&lt;p>😄&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 语冰</title><link>https://www.yubing.co/posts/</link><description>Recent content in Posts on 语冰</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 11 Nov 2021 11:00:45 +0800</lastBuildDate><atom:link href="https://www.yubing.co/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>第一篇文章</title><link>https://www.yubing.co/posts/my-first-post/</link><pubDate>Thu, 11 Nov 2021 11:00:45 +0800</pubDate><guid>https://www.yubing.co/posts/my-first-post/</guid><description>Contents Chapter 1 Section 1 Chapter 2 Section 1 Chapter 1 Section 1 Chapter 2 fgfg
+dfdsfd dfdfd dfdfd dfdfdf fgfg
+dfdsfd dfdfd dfdfd dfdfdf fgfg
+dfdsfd dfdfd dfdfd dfdfdf fgfg
+dfdsfd dfdfd dfdfd dfdfdf fgfg
+dfdsfd dfdfd dfdfd dfdfdf
+Section 1 $ls -al func main() { var slice []int for i:= 0;i &amp;lt; 10000;i++ { slice = append(slice,rand.</description></item><item><title>支持表情</title><link>https://www.yubing.co/posts/emoji-support/</link><pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate><guid>https://www.yubing.co/posts/emoji-support/</guid><description>&lt;p>😄&lt;/p>
 &lt;p>I ❤️ Hugo!&lt;/p>
 &lt;p>Emoji can be enabled in a Hugo project in a number of ways.&lt;/p></description></item></channel></rss>
