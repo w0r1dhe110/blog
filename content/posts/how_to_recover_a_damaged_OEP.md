@@ -1,5 +1,5 @@
 +++ 
-draft = true
+draft = false
 date = 2017-09-04T18:54:41+08:00
 title = "如何恢复被破坏的OEP"
 description = "How to recover a damaged OEP"
