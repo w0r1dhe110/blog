@@ -9,21 +9,17 @@
 <script>hljs.initHighlightingOnLoad()</script>
 <meta http-equiv=content-security-policy content="upgrade-insecure-requests; block-all-mixed-content; default-src 'self'; child-src 'self'; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net/; form-action 'self'; frame-src 'self'; img-src 'self'; object-src 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com/ https://cdn.jsdelivr.net/; script-src 'self' 'unsafe-inline' https://www.google-analytics.com; prefetch-src 'self'; connect-src 'self' https://www.google-analytics.com;">
 <meta name=author content="语冰">
-<meta name=description content="Guide to emoji usage in Hugo">
+<meta name=description content="记录日常">
 <meta name=keywords content="安全研究员,软件工程师,数据分析爱好者">
 <meta name=twitter:card content="summary">
-<meta name=twitter:title content="支持表情">
-<meta name=twitter:description content="Guide to emoji usage in Hugo">
-<meta property="og:title" content="支持表情">
-<meta property="og:description" content="Guide to emoji usage in Hugo">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://www.yubing.co/posts/emoji-support/"><meta property="article:section" content="posts">
-<meta property="article:published_time" content="2019-03-05T00:00:00+00:00">
-<meta property="article:modified_time" content="2019-03-05T00:00:00+00:00"><meta property="og:site_name" content="语冰">
-<title>
-支持表情 · 语冰
-</title>
-<link rel=canonical href=https://www.yubing.co/posts/emoji-support/>
+<meta name=twitter:title content="json">
+<meta name=twitter:description content="记录日常">
+<meta property="og:title" content="json">
+<meta property="og:description" content="记录日常">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.yubing.co/tags/json/"><meta property="og:site_name" content="语冰">
+<title>标签: json · 语冰</title>
+<link rel=canonical href=https://www.yubing.co/tags/json/>
 <link rel=preload href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as=font type=font/woff2 crossorigin>
 <link rel=stylesheet href=/css/coder.min.9800fae273b590afec9dc5ff15104d0c8dbee34abc5f4caa8dc9bab00745b78e.css integrity="sha256-mAD64nO1kK/sncX/FRBNDI2+40q8X0yqjcm6sAdFt44=" crossorigin=anonymous media=screen>
 <link rel=stylesheet href=/css/coder-dark.min.876b132a2ef3947e5bdc3c8dbeda49fc71bd5a4abbd4ddfbc92e8112aebfebe3.css integrity="sha256-h2sTKi7zlH5b3DyNvtpJ/HG9Wkq71N37yS6BEq6/6+M=" crossorigin=anonymous media=screen>
@@ -31,7 +27,8 @@
 <link rel=icon type=image/png href=/images/favicon-16x16.png sizes=16x16>
 <link rel=apple-touch-icon href=/images/apple-touch-icon.png>
 <link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png>
-<meta name=generator content="Hugo 0.89.3">
+<link rel=alternate type=application/rss+xml href=/tags/json/index.xml title=语冰>
+<meta name=generator content="Hugo 0.91.2">
 </head>
 <body class="preload-transitions colorscheme-dark">
 <div class=float-container>
@@ -66,58 +63,22 @@
 <span>|</span>
 </li>
 <li class=navigation-item>
-<a href=https://www.yubing.co/en/posts/emoji-support/>🇬🇧</a>
+<a href=https://www.yubing.co/en/>🇬🇧</a>
 </li>
 </ul>
 </section>
 </nav>
 <div class=content>
-<section class="container post">
-<article>
-<header>
-<div class=post-title>
+<section class="container list">
 <h1 class=title>
-<a class=title-link href=https://www.yubing.co/posts/emoji-support/>
-支持表情
-</a>
+<a class=title-link href=https://www.yubing.co/tags/json/>标签: Json</a>
 </h1>
-</div>
-<div class=post-meta>
-<div class=date>
-<span class=posted-on>
-<i class="fa fa-calendar" aria-hidden=true></i>
-<time datetime=2019-03-05T00:00:00Z>
-March 5, 2019
-</time>
-</span>
-<span class=reading-time>
-<i class="fa fa-clock-o" aria-hidden=true></i>
-阅读时间：1 分钟
-</span>
-</div>
-<div class=tags>
-<i class="fa fa-tag" aria-hidden=true></i>
-<span class=tag>
-<a href=/tags/emoji/>emoji</a>
-</span></div>
-</div>
-</header>
-<div>
-<p>😄</p>
-<p>I ❤️ Hugo!</p>
-<p>Emoji can be enabled in a Hugo project in a number of ways.</p>
-<p>The <a href=https://gohugo.io/functions/emojify/><code>emojify</code></a> function can be called directly in templates or <a href=https://gohugo.io/templates/shortcode-templates/#inline-shortcodes>Inline Shortcodes</a>.</p>
-<p>To enable emoji globally, set <code>enableEmoji</code> to <code>true</code> in your site&rsquo;s <a href=https://gohugo.io/getting-started/configuration/>configuration</a> and then you can type emoji shorthand codes directly in content files; e.g.</p>
-<p>The <a href=http://www.emoji-cheat-sheet.com/>Emoji cheat sheet</a> is a useful reference for emoji shorthand codes.</p>
-<hr>
-<p><strong>N.B.</strong> The above steps enable Unicode Standard emoji characters and sequences in Hugo, however the rendering of these glyphs depends on the browser and the platform. To style the emoji you can either use a third party emoji font or a font stack; e.g.</p>
-<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>.emoji {
-  font-family: Apple Color Emoji, Segoe UI Emoji, NotoColorEmoji, Segoe UI Symbol, Android Emoji, EmojiSymbols;
-}</code></pre></div>
-</div>
-<footer>
-</footer>
-</article>
+<ul>
+<li>
+<span class=date>November 11, 2021</span>
+<a class=title href=/posts/my-first-post/>Pyspark读取和保存Json文件</a>
+</li>
+</ul>
 </section>
 </div>
 <footer class=footer>
@@ -125,7 +86,7 @@ March 5, 2019
 <p>脚踏实地，仰望星空</p>
 ©
 2019 -
-2021
+2022
 语冰
 ·
 Powered by <a href=https://gohugo.io/>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/>Coder</a>.
