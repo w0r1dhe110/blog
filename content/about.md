@@ -7,3 +7,8 @@ author = "Hugo Authors"
 +++
 
 ....
+
+- Evi1Emai1战队成员
+- 擅长Python、Go...
+- Web Pentester
+
