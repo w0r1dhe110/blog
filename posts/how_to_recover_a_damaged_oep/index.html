@@ -1,0 +1,205 @@
+<!doctype html><html lang=zh-cn>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta http-equiv=content-language content="zh-cn">
+<meta name=color-scheme content="light dark">
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/monokai.min.css>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js></script>
+<script>hljs.initHighlightingOnLoad()</script>
+<meta http-equiv=content-security-policy content="upgrade-insecure-requests; block-all-mixed-content; default-src 'self'; child-src 'self'; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net/; form-action 'self'; frame-src 'self'; img-src 'self' https://s1.ax1x.com; object-src 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com/ https://cdn.jsdelivr.net/; script-src 'self' 'unsafe-inline' https://www.google-analytics.com; prefetch-src 'self'; connect-src 'self' https://www.google-analytics.com;">
+<meta name=author content="语冰">
+<meta name=description content="How to recover a damaged OEP">
+<meta name=keywords content="安全研究员,软件工程师,数据分析爱好者">
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="如何恢复被破坏的OEP">
+<meta name=twitter:description content="How to recover a damaged OEP">
+<meta property="og:title" content="如何恢复被破坏的OEP">
+<meta property="og:description" content="How to recover a damaged OEP">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.yubing.co/posts/how_to_recover_a_damaged_oep/"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2017-09-04T18:54:41+08:00">
+<meta property="article:modified_time" content="2017-09-04T18:54:41+08:00"><meta property="og:site_name" content="语冰">
+<title>
+如何恢复被破坏的OEP · 语冰
+</title>
+<link rel=canonical href=https://www.yubing.co/posts/how_to_recover_a_damaged_oep/>
+<link rel=preload href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as=font type=font/woff2 crossorigin>
+<link rel=stylesheet href=/css/coder.min.9800fae273b590afec9dc5ff15104d0c8dbee34abc5f4caa8dc9bab00745b78e.css integrity="sha256-mAD64nO1kK/sncX/FRBNDI2+40q8X0yqjcm6sAdFt44=" crossorigin=anonymous media=screen>
+<link rel=stylesheet href=/css/coder-dark.min.876b132a2ef3947e5bdc3c8dbeda49fc71bd5a4abbd4ddfbc92e8112aebfebe3.css integrity="sha256-h2sTKi7zlH5b3DyNvtpJ/HG9Wkq71N37yS6BEq6/6+M=" crossorigin=anonymous media=screen>
+<link rel=icon type=image/png href=/images/favicon.png sizes=32x32>
+<link rel=icon type=image/png href=/images/favicon-16x16.png sizes=16x16>
+<link rel=apple-touch-icon href=/images/apple-touch-icon.png>
+<link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png>
+<meta name=generator content="Hugo 0.91.2">
+</head>
+<body class="preload-transitions colorscheme-dark">
+<div class=float-container>
+<a id=dark-mode-toggle class=colorscheme-toggle>
+<i class="fa fa-adjust fa-fw" aria-hidden=true></i>
+</a>
+</div>
+<main class=wrapper>
+<nav class=navigation>
+<section class=container>
+<a class=navigation-title href=/>
+语冰
+</a>
+<input type=checkbox id=menu-toggle>
+<label class="menu-button float-right" for=menu-toggle>
+<i class="fa fa-bars fa-fw" aria-hidden=true></i>
+</label>
+<ul class=navigation-list>
+<li class=navigation-item>
+<a class=navigation-link href=/about/>关于</a>
+</li>
+<li class=navigation-item>
+<a class=navigation-link href=/posts/>文章</a>
+</li>
+<li class=navigation-item>
+<a class=navigation-link href=/projects/>项目</a>
+</li>
+<li class=navigation-item>
+<a class=navigation-link href=/contact/>联系我</a>
+</li>
+<li class="navigation-item menu-separator">
+<span>|</span>
+</li>
+<li class=navigation-item>
+<a href=https://www.yubing.co/en/>🇬🇧</a>
+</li>
+</ul>
+</section>
+</nav>
+<div class=content>
+<section class="container post">
+<article>
+<header>
+<div class=post-title>
+<h1 class=title>
+<a class=title-link href=https://www.yubing.co/posts/how_to_recover_a_damaged_oep/>
+如何恢复被破坏的OEP
+</a>
+</h1>
+</div>
+<div class=post-meta>
+<div class=date>
+<span class=posted-on>
+<i class="fa fa-calendar" aria-hidden=true></i>
+<time datetime=2017-09-04T18:54:41+08:00>
+September 4, 2017
+</time>
+</span>
+<span class=reading-time>
+<i class="fa fa-clock-o" aria-hidden=true></i>
+阅读时间：1 分钟
+</span>
+</div>
+<div class=authors>
+<i class="fa fa-user" aria-hidden=true></i>
+<a href=/authors/he110w0r1d/>he110w0r1d</a></div>
+<div class=categories>
+<i class="fa fa-folder" aria-hidden=true></i>
+<a href=/categories/reverse-analysis/>Reverse Analysis</a>
+<span class=separator>•</span>
+<a href=/categories/pe/>PE</a></div>
+<div class=tags>
+<i class="fa fa-tag" aria-hidden=true></i>
+<span class=tag>
+<a href=/tags/pe/>pe</a>
+</span>
+<span class=separator>•</span>
+<span class=tag>
+<a href=/tags/oep/>oep</a>
+</span></div>
+</div>
+</header>
+<div>
+<h1 id=遇到一个坑>
+遇到一个坑
+<a class=heading-link href=#%e9%81%87%e5%88%b0%e4%b8%80%e4%b8%aa%e5%9d%91>
+<i class="fa fa-link" aria-hidden=true></i>
+</a>
+</h1>
+<p>练习使用反汇编引擎的时候，作者提供了一个练习的样本；但是在用的时候，怎么也反汇编不出来结果。一度怀疑是代码出了问题。难道样本用了反反汇编？那也不应该不出结果啊。换了一个样本之后，出现了反汇编结果，可以确定作者提供的样本出了问题。</p>
+<p>使用IDA打开，尝试是否能够成功反汇编，打开出现异常的入口点地址提示。</p>
+<p><img src=https://s1.ax1x.com/2018/12/03/FKXXh6.png alt=FKXXh6.png></p>
+<p>图一:IDA打开截图</p>
+<p>查看作者提供的PE文件，竟然都是同一个入口点。可能是作者为了防止误操作运行。但是还让练习反汇编和动态分析，是不是坑。管他是不是坑，先踩了再说。</p>
+<p><img src=https://s1.ax1x.com/2018/12/03/FMZ1aV.png alt=FMZ1aV.png></p>
+<p>图二：无效的入口点</p>
+<hr>
+<p><strong>思路：我们都知道编程从main()函数开始，实际上系统先调用start()函数，然后再调用用户的main()函数(start函数负责系统的环境初始化)。根据start函数找入口点（类比相同的编译器的入口点函数的特征，因为不同的编译器，start函数会有所不同）</strong></p>
+<h1 id=0x00-找start函数的foa>
+0x00 找start函数的FOA
+<a class=heading-link href=#0x00-%e6%89%bestart%e5%87%bd%e6%95%b0%e7%9a%84foa>
+<i class="fa fa-link" aria-hidden=true></i>
+</a>
+</h1>
+<p>通过对比相同编译器的编译的其他样本，找到start()函数的前三条指令。</p>
+<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback> push    ebp         55
+ mov     ebp, esp    8B EC
+ push    0FFFFFFFFh  FF 68 
+</code></pre></div><p>利用十六进制编辑器，搜索前三条指令558BECFF68,在文件中共发现了三处。</p>
+<p><img src=https://s1.ax1x.com/2018/12/04/FQkhWQ.png alt=FQkhWQ.png></p>
+<p>图三：搜索的结果</p>
+<p>根据节表的信息，可以看到这三处，都位于代码节.text中。无法进行排处，先用第一个偏移<code>11590h</code>进行尝试。</p>
+<p><img src=https://s1.ax1x.com/2018/12/04/FQJ6Ig.png alt=FQJ6Ig.png></p>
+<p>图四：节表</p>
+<h1 id=0x01根据foa算出rva>
+0x01根据FOA算出RVA
+<a class=heading-link href=#0x01%e6%a0%b9%e6%8d%aefoa%e7%ae%97%e5%87%barva>
+<i class="fa fa-link" aria-hidden=true></i>
+</a>
+</h1>
+<h2 id=1先算出节内偏移>
+1.先算出节内偏移
+<a class=heading-link href=#1%e5%85%88%e7%ae%97%e5%87%ba%e8%8a%82%e5%86%85%e5%81%8f%e7%a7%bb>
+<i class="fa fa-link" aria-hidden=true></i>
+</a>
+</h2>
+<p>根据节表可知，.text节在文件中的偏移为400h</p>
+<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>offset = 11590h-400h = 11190h
+</code></pre></div><h2 id=2再根据内存布局算出入口点的rva>
+2.再根据内存布局算出入口点的RVA
+<a class=heading-link href=#2%e5%86%8d%e6%a0%b9%e6%8d%ae%e5%86%85%e5%ad%98%e5%b8%83%e5%b1%80%e7%ae%97%e5%87%ba%e5%85%a5%e5%8f%a3%e7%82%b9%e7%9a%84rva>
+<i class="fa fa-link" aria-hidden=true></i>
+</a>
+</h2>
+<p>根据节表可知,.text节的RVA地址为1000h</p>
+<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>RVA = 11190h+1000h = 12190h
+</code></pre></div><h1 id=0x02修改入口点地址>
+0x02修改入口点地址
+<a class=heading-link href=#0x02%e4%bf%ae%e6%94%b9%e5%85%a5%e5%8f%a3%e7%82%b9%e5%9c%b0%e5%9d%80>
+<i class="fa fa-link" aria-hidden=true></i>
+</a>
+</h1>
+<p>修复入口点地址，另存为exe.</p>
+<p><img src=https://s1.ax1x.com/2018/12/04/FQtWD0.png alt=FQtWD0.png></p>
+<p>图五：修改后的入口点</p>
+<p>用IDA反汇编后，发现已正确找到入口点。</p>
+<p><img src=https://s1.ax1x.com/2018/12/04/FQNpPe.png alt=FQNpPe.png></p>
+<p>图六：start()函数</p>
+</div>
+<footer>
+</footer>
+</article>
+</section>
+</div>
+<footer class=footer>
+<section class=container>
+<p>脚踏实地，仰望星空</p>
+©
+2019 -
+2022
+语冰
+·
+Powered by <a href=https://gohugo.io/>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/>Coder</a>.
+</section>
+</footer>
+</main>
+<script src=/js/coder.min.03b17769f4f91ae35667e1f2a1ca8c16f50562576cf90ff32b3179926914daa5.js integrity="sha256-A7F3afT5GuNWZ+HyocqMFvUFYlds+Q/zKzF5kmkU2qU="></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HLNV7SWJXG"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-HLNV7SWJXG')</script>
+</body>
+</html>
